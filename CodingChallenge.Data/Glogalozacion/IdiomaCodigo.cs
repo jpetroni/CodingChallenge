@@ -9,7 +9,9 @@ namespace CodingChallenge.Data.Glogalozacion
         [Description("es-AR")]
         ES_AR = 1,
         [Description("en-US")]
-        EN_US = 2
+        EN_US = 2, 
+        [Description("fr-FR")]
+        FR_FR = 3
     }
     internal static class Extensions
     {

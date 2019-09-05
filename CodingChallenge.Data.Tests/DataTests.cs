@@ -170,5 +170,24 @@ namespace CodingChallenge.Data.Tests
 
             Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 4 | Perimetro 8 <br/>1 Círculo | Area 7,07 | Perimetro 9,42 <br/>1 Triángulo | Area 6,93 | Perimetro 12 <br/>1 Trapecio | Area 56 | Perimetro 32 <br/>1 Rectangulo | Area 300 | Perimetro 80 <br/>TOTAL:<br/>5 formas Perimetro 141,42 Area 374", resumen);
         }
+
+        [TestCase]
+        public void TestResumenListaConTodosFrances()
+        {
+            var trapecio = new ListFormaWrapper()
+            {
+                new Rectangulo(10,30),
+                new Trapecio(10,7,6,8),
+                 new Circulo(3),
+                new Triangulo(4),
+                new Cuadrado(2),
+            };
+
+            var _servicio = new ServicioGeometria(trapecio, IdiomaCodigo.FR_FR);
+
+            var resumen = _servicio.Imprimir();
+
+            Assert.AreEqual("<h1>Rapport de formulaires</h1>1 Carré | Zone 4 | Périmètre 8 <br/>1 Cercle | Zone 7,07 | Périmètre 9,42 <br/>1 Triangle | Zone 6,93 | Périmètre 12 <br/>1 Trapèze | Zone 56 | Périmètre 32 <br/>1 Rectangle | Zone 300 | Périmètre 80 <br/>TOTAL:<br/>5 formes Périmètre 141,42 Zone 374", resumen);
+        }
     }
 }

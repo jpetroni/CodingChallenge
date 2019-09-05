@@ -90,6 +90,7 @@
       <LastGenOutput>StringResources.en-US.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Glogalozacion\Recursos\StringResources.fr-FR.resx" />
     <EmbeddedResource Include="Glogalozacion\Recursos\StringResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
